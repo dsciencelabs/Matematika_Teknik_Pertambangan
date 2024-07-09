@@ -63,18 +63,14 @@ Adapun isi pembelajaran dalam modul ini adalah sebagai berikut:
   * Eigenvector
   * Aplikasi dalam Pertambangan
 
-
 * Optimisasi dalam Pertambangan
-  * Metode Optimisasi
-  * Studi Kasus
+  * Pemrograman Linier
+  * Pemrograman Model Nonlinear
   
-* Pemodelan Matematika
-  * Model Linear
-  * Model Nonlinear
-  * Simulasi Monte Carlo
-  * Penerapan SMC dalam Pertambangan
-  * Metode Iteratif
-  * Aplikasi MI dalam Pertambangan
+* Trigonometri dan Geometri
+  * Trigonometri
+  * Geometri
+
 
 ## Penulis {-}
 

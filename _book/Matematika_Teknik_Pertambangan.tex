@@ -1,0 +1,687 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{lscape}
+
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Matematika Teknik Pertambangan},
+  pdfauthor={Bakti Siregar, M.Sc},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Matematika Teknik Pertambangan}
+\author{Bakti Siregar, M.Sc}
+\date{2024-07-09}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{Kata Pengantar}\label{kata-pengantar}
+\addcontentsline{toc}{chapter}{Kata Pengantar}
+
+Dengan mengucap syukur kepada Tuhan Yang Maha Esa, saya sangat senang dapat mempersembahkan eBook ``Matematika Tambang'' kepada para pembaca yang budiman. Buku ini merupakan hasil dari proses panjang, penelitian mendalam, serta dedikasi yang tiada henti. Harapan saya, eBook ini dapat memberikan manfaat yang signifikan bagi para pembaca, baik itu akademisi, praktisi, maupun masyarakat umum yang memiliki minat pada bidang ini.
+
+Buku ini disusun dengan tujuan memberikan wawasan dan pengetahuan yang komprehensif mengenai konsep-konsep matematika yang relevan dan aplikatif dalam bidang pertambangan. Melalui buku ini, pembaca diharapkan dapat memahami konsep dasar kalkulus, aljabar linear, statistik, dan probabilitas yang diterapkan dalam pemodelan dan analisis data pertambangan.
+
+\section*{Ringkasan Materi}\label{ringkasan-materi}
+\addcontentsline{toc}{section}{Ringkasan Materi}
+
+Adapun isi pembelajaran dalam modul ini adalah sebagai berikut:
+
+\begin{itemize}
+\tightlist
+\item
+  Kalkulus
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Pengantar Matematika Tambang
+  \item
+    Bilangan Real
+  \item
+    Konsep Fungsi
+  \item
+    Konsep Limit Fungsi
+  \item
+    Konsep Turunan Fungsi
+  \item
+    Penggunaan Turunan
+  \item
+    Konsep Integral Fungsi
+  \item
+    Penggunaan Integral
+  \item
+    Konsep Fungsi Transenden
+  \end{itemize}
+\item
+  Aljabar Linear
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Matriks
+  \item
+    Determinan
+  \item
+    Sistem Persamaan Linear
+  \item
+    Eigenvalue
+  \item
+    Eigenvector
+  \item
+    Aplikasi dalam Pertambangan
+  \end{itemize}
+\item
+  Optimisasi dalam Pertambangan
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Metode Optimisasi
+  \item
+    Studi Kasus
+  \end{itemize}
+\item
+  Pemodelan Matematika
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Model Linear
+  \item
+    Model Nonlinear
+  \item
+    Simulasi Monte Carlo
+  \item
+    Penerapan SMC dalam Pertambangan
+  \item
+    Metode Iteratif
+  \item
+    Aplikasi MI dalam Pertambangan
+  \end{itemize}
+\end{itemize}
+
+\section*{Penulis}\label{penulis}
+\addcontentsline{toc}{section}{Penulis}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\href{https://www.linkedin.com/in/dsciencelabs/}{Bakti Siregar, M.Sc., CDS}} bekerja sebagai Dosen di Prodi Sains Data Institut Teknologi Sains Bandung. Beliau adalah meraih gelar Magister-nya dari Departemen Matematika Terapan (Applied Mathematics) National Sun Yat Sen University, Taiwan. Selain mengajar beliau juga pernah bekerja sebagai \textbf{Data Scientist Freelance} di perusahaan-perusahaan ternama seperti \href{https://www.jne.co.id/id/beranda}{JNE}, \href{https://www.samoragroup.co.id/home/en}{Samora Group}, \href{https://www.pertamina.com/}{Pertamina}, dan \href{https://ecgoevmoto.com/}{PT. Green City Traffic}. Beliau memiliki antusiasme khusus dalam mengerjakan proyek (mengajar) Big Data Analytics, Machine Learning, Optimisasi, dan Analisis Time Series di bidang keuangan dan investasi. Keahlian utama yang dimilikinya adalah bahasa pemrograman Statistik seperti R Studio dan Python. Beliau juga sudah terbiasa dalam mengaplikasikan sistem basis data MySQL/NoSQL untuk manajemen data, serta mahir dalam menggunakan tools Big Data seperti Spark dan Hadoop. Beberapa project beliau dapat dilihat di link berikut: \href{https://rpubs.com/dsciencelabs}{Rpubs}, \href{https://github.com/dsciencelabs}{Github}, \href{https://dsciencelabs.github.io/web/index.html}{Website}, dan \href{https://www.kaggle.com/baktisiregar/code}{Kaggle}.
+\end{itemize}
+
+\section*{Ucapan Terima Kasih}\label{ucapan-terima-kasih}
+\addcontentsline{toc}{section}{Ucapan Terima Kasih}
+
+Proses penulisan eBook ini tidak terlepas dari dukungan berbagai pihak. Saya ingin mengucapkan terima kasih kepada:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Keluarga} yang selalu memberikan dukungan moral dan semangat tanpa henti.
+\item
+  \textbf{Rekan-rekan dan Kolaborator} yang telah memberikan masukan, saran, dan kritik yang konstruktif.
+\item
+  Institusi dan Organisasi, Khususnya \textbf{\href{https://itsb.ac.id/}{ITSB}} yang telah menyediakan sumber daya dan fasilitas yang diperlukan selama proses penelitian dan penulisan.
+\end{itemize}
+
+Saya berharap eBook ini dapat menjadi referensi yang bermanfaat dan memberikan inspirasi serta pengetahuan baru bagi pembaca. Semoga Ebook ini dapat memenuhi ekspektasi dan kebutuhan para pembaca dan semoga ilmu yang disampaikan dapat bermanfaat bagi semua.
+
+\section*{Masukan \& Saran}\label{masukan-saran}
+\addcontentsline{toc}{section}{Masukan \& Saran}
+
+Semua masukan dan tanggapan Anda sangat berarti bagi kami untuk memperbaiki Ebook Matematika Tambang ini kedepannya. Bagi para pembaca/pengguna yang ingin menyampaikan masukan dan tanggapan, dipersilahkan melalui kontak dibawah ini!
+
+\textbf{Email:} \href{mailto:dsciencelabs@outlook.com}{\nolinkurl{dsciencelabs@outlook.com}}
+
+\chapter{Pengantar}\label{pengantar}
+
+Matematika Teknik Pertambangan adalah bidang studi yang memadukan konsep-konsep terapan ilmu matematika dalam berbagai ruang lingkup teknik pertambangan. Pada konteks ini, matematika digunakan untuk menyelesaikan berbagai masalah yang terkait dengan eksplorasi, ekstraksi, dan pengolahan mineral.
+
+\section{Konsep Matematika}\label{konsep-matematika}
+
+Matematika memainkan peran penting dalam berbagai aspek teknik pertambangan. Berikut adalah beberapa konsep matematika yang sangat penting dalam bidang ini:
+
+\subsection{Kalkulus (Diferensial dan Integral)}\label{kalkulus-diferensial-dan-integral}
+
+Kalkulus digunakan dalam perhitungan volume, optimasi, dan analisis kestabilan.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Perhitungan Volume}: Menggunakan integral untuk menghitung volume cadangan mineral.
+\item
+  \textbf{Optimasi Rute Penambangan}: Menggunakan derivatif untuk menemukan titik maksimum atau minimum fungsi biaya atau keuntungan.
+\item
+  \textbf{Analisis Kestabilan Lereng}: Persamaan diferensial digunakan untuk memodelkan kestabilan lereng tambang.
+\end{itemize}
+
+Adapun teori Diferensial dan Integral yang digunakan adalah sebagai berikut:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Integral Ganda}: Digunakan dalam perhitungan volume.
+\item
+  \textbf{Persamaan Diferensial}: Digunakan untuk model transportasi panas dan aliran fluida.
+\end{itemize}
+
+\subsection{Aljabar Linier}\label{aljabar-linier}
+
+Aljabar linier sangat penting dalam pemodelan data geologi dan analisis seismik.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Analisis Data Seismik}: Menggunakan matriks untuk memproses data gelombang seismik.
+\item
+  \textbf{Pengolahan Citra Geologi}: Transformasi linear untuk memanipulasi citra geologi.
+\item
+  \textbf{Model Geostatistik}: Matriks kovarians digunakan dalam pemodelan distribusi mineral.
+\end{itemize}
+
+Adapun Aljabar Linier yang digunakan adalah sebagai berikut:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Matriks dan Vektor}: Digunakan dalam pemodelan data multidimensi.
+\item
+  \textbf{Dekomposisi Nilai Singular (SVD)}: Digunakan untuk mengurangi dimensi data.
+\end{itemize}
+
+\subsection{Teori Optimasi}\label{teori-optimasi}
+
+Optimasi digunakan untuk perencanaan dan operasi tambang yang efisien.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Rencana Penambangan Optimal}: Menentukan jadwal produksi yang memaksimalkan keuntungan.
+\item
+  \textbf{Alokasi Sumber Daya}: Optimasi penggunaan mesin dan tenaga kerja.
+\item
+  \textbf{Jadwal Produksi}: Menggunakan algoritma optimasi untuk merencanakan produksi yang efisien.
+\end{itemize}
+
+Adapun metode Optimasi yang digunakan adalah sebagai berikut:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Pemrograman Linier}: Untuk masalah optimasi dengan kendala linier.
+\item
+  \textbf{Pemrograman Non-Linier}: Untuk masalah dengan fungsi objektif non-linier.
+\item
+  \textbf{Algoritma Genetika}: Metode heuristik untuk menemukan solusi mendekati optimal.
+\end{itemize}
+
+\subsection{Geometri dan Trigonometri}\label{geometri-dan-trigonometri}
+
+Geometri dan trigonometri digunakan dalam survei tambang dan perencanaan desain.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Survei Tambang}: Pengukuran dan pemetaan wilayah tambang.
+\item
+  \textbf{Perencanaan Desain Tambang}: Merancang struktur tambang yang aman dan efisien.
+\item
+  \textbf{Analisis Struktur Geologi}: Menggunakan geometri untuk memahami bentuk dan orientasi struktur geologi.
+\end{itemize}
+
+Adapun ilmu Geometri dan Trigonometri yang digunakan adalah sebagai berikut:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Pengukuran Sudut dan Panjang}: Trigonometri digunakan untuk menentukan jarak dan sudut dalam survei.
+\item
+  \textbf{Transformasi Koordinat}: Mengubah data dari satu sistem koordinat ke sistem lain.
+\end{itemize}
+
+\section{Terapan Matematika}\label{terapan-matematika}
+
+\subsection{Kalkulus (Diferensial dan Integral)}\label{kalkulus-diferensial-dan-integral-1}
+
+\subsubsection*{Integral}\label{integral}
+\addcontentsline{toc}{subsubsection}{Integral}
+
+Integral tak tentu:
+
+\[\int f(x) \, dx = F(x) + C\]
+
+di mana \(F(x)\) adalah antiturunan dari \(f(x)\) dan \(C\) adalah konstanta integrasi.
+
+Integral tertentu:
+
+\[
+  \int_a^b f(x) \, dx = F(b) - F(a)
+\]
+
+di mana \(F(x)\) adalah antiturunan dari \(f(x)\).
+
+Menghitung volume mineral dalam sebuah tambang dengan bentuk paraboloid:
+
+\[
+  V = \int_0^h \pi r^2 \, dz = \pi \int_0^h \left( \frac{R}{h} z \right)^2 \, dz
+\]
+
+\[
+  V = \pi \frac{R^2}{h^2} \int_0^h z^2 \, dz = \pi \frac{R^2}{h^2} \left[ \frac{z^3}{3} \right]_0^h = \pi \frac{R^2}{h^2} \cdot \frac{h^3}{3} = \frac{1}{3} \pi R^2 h
+\]
+Jadi, volume mineral adalah \(\frac{1}{3} \pi R^2 h\).
+
+\subsubsection*{Persamaan Diferensial}\label{persamaan-diferensial}
+\addcontentsline{toc}{subsubsection}{Persamaan Diferensial}
+
+Persamaan diferensial linear orde pertama:
+
+\[
+  \frac{dy}{dx} + P(x)y = Q(x)
+\]
+
+Menentukan laju perubahan konsentrasi gas dalam sebuah tambang. Misalkan persamaan diferensialnya adalah:
+
+\[
+  \frac{dC}{dt} + 0.1C = 2
+\]
+Ini adalah persamaan diferensial linier dengan \(P(t) = 0.1\) dan \(Q(t) = 2\). Solusinya adalah:
+
+\[
+  C(t) = e^{-0.1t} \left( \int 2 e^{0.1t} \, dt \right) = e^{-0.1t} \left( \frac{2}{0.1} e^{0.1t} + C_1 \right) = 20 + C_1 e^{-0.1t}
+\]
+
+di mana \(C_1\) adalah konstanta integrasi.
+
+\subsubsection*{Derivatif}\label{derivatif}
+\addcontentsline{toc}{subsubsection}{Derivatif}
+
+Turunan fungsi:
+
+\[
+  \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
+\]
+
+Menentukan laju perubahan kedalaman tambang dengan waktu. Misalkan kedalaman tambang \(d(t)\) diberikan oleh:
+
+\[
+  d(t) = 5t^2 + 3t + 10
+\]
+Maka, laju perubahan kedalaman adalah:
+
+\[
+  \frac{dd}{dt} = \frac{d}{dt} (5t^2 + 3t + 10) = 10t + 3
+\]
+Jadi, laju perubahan kedalaman pada waktu \(t = 2\) adalah:
+
+\[
+  \frac{dd}{dt} \bigg|_{t=2} = 10(2) + 3 = 23
+\]
+Jadi, laju perubahan kedalaman pada waktu 2 adalah 23 meter per satuan waktu.
+
+\subsection{Aljabar Linier}\label{aljabar-linier-1}
+
+\subsubsection*{Matriks}\label{matriks}
+\addcontentsline{toc}{subsubsection}{Matriks}
+
+Dalam teknik pertambangan, matriks memiliki berbagai aplikasi yang penting dalam analisis data geologis dan perencanaan tambang. Misalkan kita memiliki data sederhana tentang kadar mineral (M) dan densitas batuan (D) di suatu area tambang yang direpresentasikan dalam bentuk matriks sebagai berikut:
+
+\[
+X = \begin{bmatrix}
+M_1 & D_1 \\
+M_2 & D_2 \\
+M_3 & D_3 \\
+\end{bmatrix}
+\]
+
+Kita ingin menghitung matriks variansi-kovariansi untuk menentukan keterkaitan antara kadar mineral dan densitas batuan. Matriks variansi-kovariansi \(\Sigma\) dapat dihitung dengan rumus:
+
+\[ 
+\Sigma = \frac{1}{n-1} \sum_{i=1}^{n} (\mathbf{x}_i - \bar{\mathbf{x}}) (\mathbf{x}_i - \bar{\mathbf{x}})^T 
+\]
+
+di mana \(\mathbf{x}_i\) adalah vektor observasi ke-i, \(\bar{\mathbf{x}}\) adalah vektor rata-rata dari data, dan \(n\) adalah jumlah sampel.
+
+Langkah-langkah Perhitungan:
+
+\begin{itemize}
+\item
+  \textbf{Hitung Rata-Rata}: \(\bar{\mathbf{x}} = \frac{1}{n} \sum_{i=1}^{n} \mathbf{x}_i\)
+\item
+  \textbf{Hitung Variansi-Kovariansi}:
+\end{itemize}
+
+\[
+\Sigma = \frac{1}{2} \begin{bmatrix}
+\text{Var}(M) & \text{Cov}(M,D) \\
+\text{Cov}(M,D) & \text{Var}(D) \\
+\end{bmatrix}
+\]
+
+Misalnya, jika data yang diamati adalah:
+
+\[
+X = \begin{bmatrix}
+3 & 5 \\
+2 & 4 \\
+4 & 6 \\
+\end{bmatrix}
+\]
+
+Maka:
+
+\begin{itemize}
+\item
+  Rata-rata \(\bar{\mathbf{x}} = \begin{bmatrix} 3 & 5 \end{bmatrix}\)
+\item
+  Variansi-Kovariansi \(\Sigma = \frac{1}{2} \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\)
+\end{itemize}
+
+Ini menunjukkan bahwa ada keterkaitan positif antara kadar mineral dan densitas batuan dalam data sederhana ini.
+
+Dalam contoh sederhana ini, kita melihat bagaimana matriks variansi-kovariansi digunakan untuk menganalisis hubungan antara variabel geologis dalam teknik pertambangan. Penggunaan matriks seperti ini membantu dalam pemahaman lebih dalam tentang struktur data geologis yang dapat digunakan untuk pengambilan keputusan lebih lanjut dalam manajemen tambang.
+
+\subsubsection*{Vektor}\label{vektor}
+\addcontentsline{toc}{subsubsection}{Vektor}
+
+Dalam teknik pertambangan, vektor digunakan untuk merepresentasikan dan menganalisis berbagai informasi penting seperti koordinat geografis dan orientasi struktur geologi. Berikut adalah contoh penghitungan manual norma vektor (magnitude) dan dot product (produk titik) dari dua vektor:
+
+Misalkan kita memiliki dua vektor dalam ruang tiga dimensi:
+
+\[ \mathbf{v}_1 = (3, -2, 1) \]
+\[ \mathbf{v}_2 = (1, 1, 2) \]
+
+Hitung Norma vektor \(\mathbf{v} = (a, b, c)\) didefinisikan sebagai:
+
+\[ \| \mathbf{v} \| = \sqrt{a^2 + b^2 + c^2} \]
+
+\textbf{Untuk \(\mathbf{v}_1\):}
+
+\[ \| \mathbf{v}_1 \| = \sqrt{3^2 + (-2)^2 + 1^2} \]
+\[ \| \mathbf{v}_1 \| = \sqrt{9 + 4 + 1} \]
+\[ \| \mathbf{v}_1 \| = \sqrt{14} \approx 3.74 \]
+
+\textbf{Untuk \(\mathbf{v}_2\):}
+
+\[ \| \mathbf{v}_2 \| = \sqrt{1^2 + 1^2 + 2^2} \]
+\[ \| \mathbf{v}_2 \| = \sqrt{1 + 1 + 4} \]
+\[ \| \mathbf{v}_2 \| = \sqrt{6} \approx 2.45 \]
+
+Hitung Dot product dari dua vektor \(\mathbf{v}_1 = (a, b, c)\) dan \(\mathbf{v}_2 = (d, e, f)\) didefinisikan sebagai:
+
+\[ \mathbf{v}_1 \cdot \mathbf{v}_2 = ad + be + cf \]
+
+\textbf{Untuk \(\mathbf{v}_1\) dan \(\mathbf{v}_2\):}
+
+\[ \mathbf{v}_1 \cdot \mathbf{v}_2 = 3 \cdot 1 + (-2) \cdot 1 + 1 \cdot 2 \]
+\[ \mathbf{v}_1 \cdot \mathbf{v}_2 = 3 - 2 + 2 \]
+\[ \mathbf{v}_1 \cdot \mathbf{v}_2 = 3 \]
+
+\subsection{Teori Optimasi}\label{teori-optimasi-1}
+
+\subsubsection*{Pemrograman Linier}\label{pemrograman-linier}
+\addcontentsline{toc}{subsubsection}{Pemrograman Linier}
+
+Fungsi objektif:
+
+\[
+  \text{Maksimalkan} \quad Z = c_1 x_1 + c_2 x_2 + \ldots + c_n x_n
+\]
+di bawah kendala:
+
+\[
+  \begin{cases}
+  a_{11}x_1 + a_{12}x_2 + \ldots + a_{1n}x_n \le b_1 \\
+  a_{21}x_1 + a_{22}x_2 + \ldots + a_{2n}x_n \le b_2 \\
+  \vdots \\
+  a_{m1}x_1 + a_{m2}x_2 + \ldots + a_{mn}x_n \le b_m \\
+  x_1, x_2, \ldots, x_n \ge 0
+  \end{cases}
+\]
+
+Misalkan kita ingin memaksimalkan produksi dua jenis mineral \(M_1\) dan \(M_2\) dengan kendala biaya dan waktu. Fungsi objektif dan kendalanya adalah:
+
+\[
+\text{Maksimalkan} \quad Z = 40x_1 + 30x_2
+\]
+\[
+\begin{cases}
+2x_1 + 3x_2 \le 60 \quad \text{(biaya)} \\
+4x_1 + 2x_2 \le 80 \quad \text{(waktu)} \\
+x_1, x_2 \ge 0
+\end{cases}
+\]
+
+Dengan menggunakan metode Simplex, kita bisa menemukan solusi optimal \(x_1 = 10\) dan \(x_2 = 0\), dengan nilai objektif \(Z = 400\).
+
+\subsubsection*{Pemrograman Non-Linier}\label{pemrograman-non-linier}
+\addcontentsline{toc}{subsubsection}{Pemrograman Non-Linier}
+
+Fungsi objektif:
+
+\[
+\text{Maksimalkan} \quad f(x_1, x_2, \ldots, x_n)
+\]
+di bawah kendala:
+
+\[
+\begin{cases}
+g_i(x_1, x_2, \ldots, x_n) \le 0, \quad i = 1, 2, \ldots, m \\
+h_j(x_1, x_2, \ldots, x_n) = 0, \quad j = 1, 2, \ldots, p
+\end{cases}
+\]
+
+Optimasi produksi tambang dengan fungsi objektif:
+
+\[
+f(x_1, x_2) = x_1^2 + x_2^2 + x_1x_2
+\]
+di bawah kendala:
+
+\[
+\begin{cases}
+x_1^2 + x_2^2 \le 10 \\
+x_1 + x_2 \le 5 \\
+x_1, x_2 \ge 0
+\end{cases}
+\]
+Menggunakan metode optimasi non-linier seperti Lagrange atau metode numerik, kita bisa menemukan solusi optimal.
+
+\subsection{Geometri dan Trigonometri}\label{geometri-dan-trigonometri-1}
+
+\subsubsection*{Trigonometri}\label{trigonometri}
+\addcontentsline{toc}{subsubsection}{Trigonometri}
+
+Identitas dasar:
+
+\[
+\sin^2 \theta + \cos^2 \theta = 1
+\]
+
+Dalam menentukan sudut elevasi sebuah lereng tambang:
+
+\[
+  \sin \theta = \frac{\text{tinggi}}{\text{panjang miring}} = \frac{3}{5} = 0.6
+\]
+
+\[
+\cos \theta = \sqrt{1 - \sin^2 \theta} = \sqrt{1 - 0.6^2} = \sqrt{1 - 0.36} = \sqrt{0.64} = 0.8
+\]
+
+\subsubsection*{Pengukuran Sudut}\label{pengukuran-sudut}
+\addcontentsline{toc}{subsubsection}{Pengukuran Sudut}
+
+Panjang busur \(s\):
+
+\[
+s = r \theta
+\]
+
+di mana \(r\) adalah jari-jari lingkaran dan \(\theta\) adalah sudut dalam radian.
+
+Mengukur panjang busur dari sebuah tambang berbentuk lingkaran dengan jari-jari 50 meter dan sudut 30 derajat (\(\frac{\pi}{6}\) radian):
+
+\[
+s = 50 \times \frac{\pi}{6} \approx 50 \times 0.5236 = 26.18 \text{ meter}
+\]
+
+\subsubsection*{Transformasi Koordinat}\label{transformasi-koordinat}
+\addcontentsline{toc}{subsubsection}{Transformasi Koordinat}
+
+Transformasi dari koordinat kartesian ke koordinat polar:
+
+\[
+\begin{cases}
+r = \sqrt{x^2 + y^2} \\
+\theta = \tan^{-1} \left( \frac{y}{x} \right)
+\end{cases}
+\]
+
+Menentukan koordinat polar dari titik tambang dengan koordinat kartesian \((3, 4)\):
+
+\[
+r = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5
+\]
+\[
+\theta = \tan^{-1} \left( \frac{4}{3} \right) \approx 0.927 \text{ radian}
+\]
+
+\subsection{Simulasi dan Pemodelan}\label{simulasi-dan-pemodelan}
+
+\subsubsection*{Persamaan Aliran Air Bawah Tanah}\label{persamaan-aliran-air-bawah-tanah}
+\addcontentsline{toc}{subsubsection}{Persamaan Aliran Air Bawah Tanah}
+
+Persamaan Darcy:
+
+\[
+Q = -KA \frac{dh}{dl}
+\]
+di mana \(Q\) adalah laju aliran, \(K\) adalah koefisien permeabilitas, \(A\) adalah luas penampang, \(dh\) adalah perubahan tinggi hidrolik, dan \(dl\) adalah jarak aliran.
+
+Menghitung aliran air bawah tanah dengan \(K = 0.01 \text{ m/s}\), \(A = 100 \text{ m}^2\), \(dh = 10 \text{ m}\), dan \(dl = 50 \text{ m}\):
+
+\[
+Q = -0.01 \times 100 \times \frac{10}{50} = -0.01 \times 100 \times 0.2 = -0.2 \text{ m}^3/\text{s}
+\]
+
+\subsubsection{Persamaan Transportasi Panas}\label{persamaan-transportasi-panas}
+
+Persamaan konduksi panas satu dimensi (Persamaan Fourier):
+\[
+\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}
+\]
+di mana \(T\) adalah suhu, \(t\) adalah waktu, \(x\) adalah posisi, dan \(\alpha\) adalah difusivitas termal.
+
+Misalkan suhu di tambang berubah dengan waktu sesuai persamaan konduksi panas, dengan \(\alpha = 1 \text{ m}^2/\text{s}\), suhu awal \(T(x, 0) = 100 \text{°C}\) di seluruh tambang. Menggunakan metode numerik, kita bisa memodelkan distribusi suhu di tambang setelah beberapa waktu.
+
+\chapter{Bilangan Real}\label{Bilangan_Real}
+
+\chapter{Konsep Fungsi}\label{Konsep_Fungsi}
+
+\section{Praktikum}\label{praktikum}
+
+\chapter{Konsep Limit Fungsi}\label{Konsep_Limit_Fungsi}
+
+\section{Praktikum}\label{praktikum-1}
+
+\chapter{Konsep Turunan}\label{Konsep_Turunan}
+
+\section{Praktikum}\label{praktikum-2}
+
+\chapter{Penggunaan Turunan Fungsi}\label{Penggunaan_Turunan_Fungsi}
+
+\section{Praktikum}\label{praktikum-3}
+
+\chapter{Konsep Integral Fungsi}\label{Konsep_Integral_Fungsi}
+
+\section{Praktikum}\label{praktikum-4}
+
+\chapter{Konsep Transenden Fungsi}\label{Konsep_Transenden_Fungsi}
+
+\section{Praktikum}\label{praktikum-5}
+
+\chapter{Penggunaan Transenden Fungsi}\label{Penggunaan_Transenden_Fungsi}
+
+\section{Praktikum}\label{praktikum-6}
+
+\chapter{Referensi}\label{referensi}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

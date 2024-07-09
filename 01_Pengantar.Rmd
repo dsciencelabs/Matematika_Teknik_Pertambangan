@@ -295,7 +295,7 @@ x_1, x_2 \ge 0
 $$
 Menggunakan metode optimasi non-linier seperti Lagrange atau metode numerik, kita bisa menemukan solusi optimal.
 
-### Geometri dan Trigonometri
+### Trigonometri dan Geometri
 
 #### Trigonometri{-}
 
@@ -351,29 +351,3 @@ $$
 \theta = \tan^{-1} \left( \frac{4}{3} \right) \approx 0.927 \text{ radian}
 $$
 
-### Simulasi dan Pemodelan
-
-#### Persamaan Aliran Air Bawah Tanah {-}
-
-Persamaan Darcy:
- 
-$$
-Q = -KA \frac{dh}{dl}
-$$
-di mana \(Q\) adalah laju aliran, \(K\) adalah koefisien permeabilitas, \(A\) adalah luas penampang, \(dh\) adalah perubahan tinggi hidrolik, dan \(dl\) adalah jarak aliran.
-
-Menghitung aliran air bawah tanah dengan \(K = 0.01 \text{ m/s}\), \(A = 100 \text{ m}^2\), \(dh = 10 \text{ m}\), dan \(dl = 50 \text{ m}\):
-
-$$
-Q = -0.01 \times 100 \times \frac{10}{50} = -0.01 \times 100 \times 0.2 = -0.2 \text{ m}^3/\text{s}
-$$
-
-#### Persamaan Transportasi Panas
-
-Persamaan konduksi panas satu dimensi (Persamaan Fourier):
-$$
-\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}
-$$
-di mana \(T\) adalah suhu, \(t\) adalah waktu, \(x\) adalah posisi, dan \(\alpha\) adalah difusivitas termal.
-
-Misalkan suhu di tambang berubah dengan waktu sesuai persamaan konduksi panas, dengan \(\alpha = 1 \text{ m}^2/\text{s}\), suhu awal \(T(x, 0) = 100 \text{°C}\) di seluruh tambang. Menggunakan metode numerik, kita bisa memodelkan distribusi suhu di tambang setelah beberapa waktu.

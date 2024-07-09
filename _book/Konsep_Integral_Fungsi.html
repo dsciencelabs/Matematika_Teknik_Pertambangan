@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Bab 7 Konsep Integral Fungsi | Matematika Teknik Pertambangan</title>
+  <meta name="description" content="Deskripsi Singkat Tentang Buku" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Bab 7 Konsep Integral Fungsi | Matematika Teknik Pertambangan" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/images/Cover_Matematika_Tambang.png" />
+  <meta property="og:description" content="Deskripsi Singkat Tentang Buku" />
+  <meta name="github-repo" content="dsciencelabs/Matematika_Teknik_Pertambangan" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bab 7 Konsep Integral Fungsi | Matematika Teknik Pertambangan" />
+  
+  <meta name="twitter:description" content="Deskripsi Singkat Tentang Buku" />
+  <meta name="twitter:image" content="/images/Cover_Matematika_Tambang.png" />
+
+<meta name="author" content="Bakti Siregar, M.Sc" />
+
+
+<meta name="date" content="2024-07-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="Penggunaan_Turunan_Fungsi.html"/>
+<link rel="next" href="Konsep_Transenden_Fungsi.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><center><img src="images/Logo_Dsciencelabs_v1.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Kata Pengantar</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ringkasan-materi"><i class="fa fa-check"></i>Ringkasan Materi</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#penulis"><i class="fa fa-check"></i>Penulis</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ucapan-terima-kasih"><i class="fa fa-check"></i>Ucapan Terima Kasih</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#masukan-saran"><i class="fa fa-check"></i>Masukan &amp; Saran</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="pengantar.html"><a href="pengantar.html"><i class="fa fa-check"></i><b>1</b> Pengantar</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="pengantar.html"><a href="pengantar.html#konsep-matematika"><i class="fa fa-check"></i><b>1.1</b> Konsep Matematika</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="pengantar.html"><a href="pengantar.html#kalkulus-diferensial-dan-integral"><i class="fa fa-check"></i><b>1.1.1</b> Kalkulus (Diferensial dan Integral)</a></li>
+<li class="chapter" data-level="1.1.2" data-path="pengantar.html"><a href="pengantar.html#aljabar-linier"><i class="fa fa-check"></i><b>1.1.2</b> Aljabar Linier</a></li>
+<li class="chapter" data-level="1.1.3" data-path="pengantar.html"><a href="pengantar.html#teori-optimasi"><i class="fa fa-check"></i><b>1.1.3</b> Teori Optimasi</a></li>
+<li class="chapter" data-level="1.1.4" data-path="pengantar.html"><a href="pengantar.html#geometri-dan-trigonometri"><i class="fa fa-check"></i><b>1.1.4</b> Geometri dan Trigonometri</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="pengantar.html"><a href="pengantar.html#terapan-matematika"><i class="fa fa-check"></i><b>1.2</b> Terapan Matematika</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="pengantar.html"><a href="pengantar.html#kalkulus-diferensial-dan-integral-1"><i class="fa fa-check"></i><b>1.2.1</b> Kalkulus (Diferensial dan Integral)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="pengantar.html"><a href="pengantar.html#aljabar-linier-1"><i class="fa fa-check"></i><b>1.2.2</b> Aljabar Linier</a></li>
+<li class="chapter" data-level="1.2.3" data-path="pengantar.html"><a href="pengantar.html#teori-optimasi-1"><i class="fa fa-check"></i><b>1.2.3</b> Teori Optimasi</a></li>
+<li class="chapter" data-level="1.2.4" data-path="pengantar.html"><a href="pengantar.html#geometri-dan-trigonometri-1"><i class="fa fa-check"></i><b>1.2.4</b> Geometri dan Trigonometri</a></li>
+<li class="chapter" data-level="1.2.5" data-path="pengantar.html"><a href="pengantar.html#simulasi-dan-pemodelan"><i class="fa fa-check"></i><b>1.2.5</b> Simulasi dan Pemodelan</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Bilangan_Real.html"><a href="Bilangan_Real.html"><i class="fa fa-check"></i><b>2</b> Bilangan Real</a></li>
+<li class="chapter" data-level="3" data-path="Konsep_Fungsi.html"><a href="Konsep_Fungsi.html"><i class="fa fa-check"></i><b>3</b> Konsep Fungsi</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Konsep_Fungsi.html"><a href="Konsep_Fungsi.html#praktikum"><i class="fa fa-check"></i><b>3.1</b> Praktikum</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Konsep_Limit_Fungsi.html"><a href="Konsep_Limit_Fungsi.html"><i class="fa fa-check"></i><b>4</b> Konsep Limit Fungsi</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Konsep_Limit_Fungsi.html"><a href="Konsep_Limit_Fungsi.html#praktikum-1"><i class="fa fa-check"></i><b>4.1</b> Praktikum</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Konsep_Turunan.html"><a href="Konsep_Turunan.html"><i class="fa fa-check"></i><b>5</b> Konsep Turunan</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="Konsep_Turunan.html"><a href="Konsep_Turunan.html#praktikum-2"><i class="fa fa-check"></i><b>5.1</b> Praktikum</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="Penggunaan_Turunan_Fungsi.html"><a href="Penggunaan_Turunan_Fungsi.html"><i class="fa fa-check"></i><b>6</b> Penggunaan Turunan Fungsi</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="Penggunaan_Turunan_Fungsi.html"><a href="Penggunaan_Turunan_Fungsi.html#praktikum-3"><i class="fa fa-check"></i><b>6.1</b> Praktikum</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Konsep_Integral_Fungsi.html"><a href="Konsep_Integral_Fungsi.html"><i class="fa fa-check"></i><b>7</b> Konsep Integral Fungsi</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="Konsep_Integral_Fungsi.html"><a href="Konsep_Integral_Fungsi.html#praktikum-4"><i class="fa fa-check"></i><b>7.1</b> Praktikum</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Konsep_Transenden_Fungsi.html"><a href="Konsep_Transenden_Fungsi.html"><i class="fa fa-check"></i><b>8</b> Konsep Transenden Fungsi</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="Konsep_Transenden_Fungsi.html"><a href="Konsep_Transenden_Fungsi.html#praktikum-5"><i class="fa fa-check"></i><b>8.1</b> Praktikum</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="Penggunaan_Transenden_Fungsi.html"><a href="Penggunaan_Transenden_Fungsi.html"><i class="fa fa-check"></i><b>9</b> Penggunaan Transenden Fungsi</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="Penggunaan_Transenden_Fungsi.html"><a href="Penggunaan_Transenden_Fungsi.html#praktikum-6"><i class="fa fa-check"></i><b>9.1</b> Praktikum</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="referensi.html"><a href="referensi.html"><i class="fa fa-check"></i><b>10</b> Referensi</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Matematika Teknik Pertambangan</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Konsep_Integral_Fungsi" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Bab 7</span> Konsep Integral Fungsi<a href="Konsep_Integral_Fungsi.html#Konsep_Integral_Fungsi" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="praktikum-4" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Praktikum<a href="Konsep_Integral_Fungsi.html#praktikum-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Penggunaan_Turunan_Fungsi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Konsep_Transenden_Fungsi.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dsciencelabs/Matematika_Teknik_Pertambangan/edit/main/07_Konsep_Integral_Fungsi.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

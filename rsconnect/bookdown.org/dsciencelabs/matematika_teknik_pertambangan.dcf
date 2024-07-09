@@ -5,7 +5,7 @@ account: dsciencelabs
 server: bookdown.org
 hostUrl: https://bookdown.org/__api__
 appId: 14298
-bundleId: 98929
+bundleId: 98930
 url: https://bookdown.org/dsciencelabs/matematika_teknik_pertambangan/
 version: 1
 asMultiple: FALSE

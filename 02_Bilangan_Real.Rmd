@@ -1,3 +1,44 @@
 # Bilangan Real {#Bilangan_Real}
 
+Bilangan real adalah himpunan semua bilangan rasional dan irasional. Himpunan ini meliputi bilangan bulat, bilangan pecahan, dan bilangan desimal yang dapat dinyatakan secara tak terbatas. Mari kita bahas definisi, sifat, jenis, rumus, dan contoh materi bilangan real secara lebih mendetail.
 
+## Definisi Bilangan Real
+
+Bilangan real adalah himpunan semua bilangan rasional (termasuk bilangan bulat dan pecahan) serta bilangan irasional. Simbol untuk himpunan bilangan real adalah \( \mathbb{R} \).
+
+## Sifat-sifat Bilangan Real
+
+1. **Komutatif dan Asosiatif:** Operasi penjumlahan dan perkalian pada bilangan real bersifat komutatif dan asosiatif.
+2. **Distributif:** Operasi perkalian distributif terhadap penjumlahan.
+3. **Aditif Invers:** Setiap bilangan real memiliki aditif invers, yaitu bilangan yang jika ditambahkan akan menghasilkan nol.
+4. **Multiplikatif Invers:** Kecuali untuk nol, setiap bilangan real memiliki multiplikatif invers.
+
+## Jenis-jenis Bilangan Real
+
+1. **Bilangan Bulat ( \( \mathbb{Z} \) ):** Bilangan bulat adalah bilangan positif dan negatif yang tidak memiliki pecahan atau bagian desimal.
+   
+2. **Bilangan Rasional ( \( \mathbb{Q} \) ):** Bilangan rasional adalah bilangan yang dapat dinyatakan sebagai pecahan \(\frac{a}{b}\) di mana \( a \) dan \( b \) adalah bilangan bulat dan \( b \neq 0 \).
+
+3. **Bilangan Irrasional:** Bilangan irasional tidak dapat dinyatakan dalam bentuk pecahan dan memiliki ekspansi desimal yang tidak berakhir atau berulang.
+
+## Aplikasi dalam Matematika Teknik Pertambangan
+
+1. **Perhitungan Kadar Mineral:**
+   - Estimasi dan analisis kadar mineral di suatu area tambang menggunakan bilangan real untuk menghitung rata-rata dan variabilitasnya.
+
+2. **Pemodelan Geostatistik:**
+   - Penggunaan bilangan real dalam pemodelan geostatistik untuk memprediksi distribusi dan kuantitas mineral di dalam tanah.
+
+3. **Analisis Biaya dan Produksi:**
+   - Perhitungan biaya operasional per unit produksi menggunakan bilangan real untuk evaluasi ekonomi dari suatu tambang.
+
+4. **Pemodelan Hidrogeologi:**
+   - Penggunaan bilangan real untuk menganalisis aliran air bawah tanah dan dampak lingkungan dalam pengelolaan air di tambang.
+
+## Contoh Kasus
+
+Sebagai contoh konkret, dalam analisis eksplorasi tambang, seorang geolog dapat menggunakan data kedalaman pengeboran (bilangan real) untuk mengevaluasi potensi suatu deposit mineral. Dengan memahami distribusi dan karakteristik bilangan real, mereka dapat membuat perkiraan yang lebih akurat tentang potensi hasil tambang dan kebutuhan operasional.
+
+## Kesimpulan
+
+Pemahaman yang baik tentang bilangan real penting dalam matematika teknik pertambangan karena mendukung berbagai analisis dan perhitungan yang esensial dalam pengelolaan dan pengembangan tambang. Dengan menggunakan konsep bilangan real ini, para profesional dapat meningkatkan efisiensi operasional dan mengoptimalkan keputusan teknis dalam industri ini.
