@@ -1,4 +1,5 @@
 book_filename: "Matematika_Tambang"
+edit: https://github.com/dsciencelabs/Matematika_Teknik_Pertambangan/edit/main/%s
 delete_merged_file: true
 language:
   label:
@@ -9,4 +10,4 @@ language:
     thm: 'Teorema '
   ui:
     chapter_name: "Bab "
-    
+

@@ -51,6 +51,7 @@ Adapun isi pembelajaran dalam modul ini adalah sebagai berikut:
   * Konsep Limit Fungsi
   * Konsep Turunan Fungsi
   * Penggunaan Turunan
+  * Konsep Integral Fungsi
   * Penggunaan Integral
   * Konsep Fungsi Transenden
   
