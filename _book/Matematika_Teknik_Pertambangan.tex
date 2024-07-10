@@ -81,7 +81,7 @@
 
 \title{Matematika Teknik Pertambangan}
 \author{Bakti Siregar, M.Sc}
-\date{2024-07-09}
+\date{2024-07-10}
 
 \begin{document}
 \maketitle
@@ -152,27 +152,19 @@ Adapun isi pembelajaran dalam modul ini adalah sebagai berikut:
   \begin{itemize}
   \tightlist
   \item
-    Metode Optimisasi
+    Pemrograman Linier
   \item
-    Studi Kasus
+    Pemrograman Model Nonlinear
   \end{itemize}
 \item
-  Pemodelan Matematika
+  Trigonometri dan Geometri
 
   \begin{itemize}
   \tightlist
   \item
-    Model Linear
+    Trigonometri
   \item
-    Model Nonlinear
-  \item
-    Simulasi Monte Carlo
-  \item
-    Penerapan SMC dalam Pertambangan
-  \item
-    Metode Iteratif
-  \item
-    Aplikasi MI dalam Pertambangan
+    Geometri
   \end{itemize}
 \end{itemize}
 
@@ -563,7 +555,7 @@ x_1, x_2 \ge 0
 \]
 Menggunakan metode optimasi non-linier seperti Lagrange atau metode numerik, kita bisa menemukan solusi optimal.
 
-\subsection{Geometri dan Trigonometri}\label{geometri-dan-trigonometri-1}
+\subsection{Trigonometri dan Geometri}\label{trigonometri-dan-geometri}
 
 \subsubsection*{Trigonometri}\label{trigonometri}
 \addcontentsline{toc}{subsubsection}{Trigonometri}
@@ -622,35 +614,87 @@ r = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5
 \theta = \tan^{-1} \left( \frac{4}{3} \right) \approx 0.927 \text{ radian}
 \]
 
-\subsection{Simulasi dan Pemodelan}\label{simulasi-dan-pemodelan}
-
-\subsubsection*{Persamaan Aliran Air Bawah Tanah}\label{persamaan-aliran-air-bawah-tanah}
-\addcontentsline{toc}{subsubsection}{Persamaan Aliran Air Bawah Tanah}
-
-Persamaan Darcy:
-
-\[
-Q = -KA \frac{dh}{dl}
-\]
-di mana \(Q\) adalah laju aliran, \(K\) adalah koefisien permeabilitas, \(A\) adalah luas penampang, \(dh\) adalah perubahan tinggi hidrolik, dan \(dl\) adalah jarak aliran.
-
-Menghitung aliran air bawah tanah dengan \(K = 0.01 \text{ m/s}\), \(A = 100 \text{ m}^2\), \(dh = 10 \text{ m}\), dan \(dl = 50 \text{ m}\):
-
-\[
-Q = -0.01 \times 100 \times \frac{10}{50} = -0.01 \times 100 \times 0.2 = -0.2 \text{ m}^3/\text{s}
-\]
-
-\subsubsection{Persamaan Transportasi Panas}\label{persamaan-transportasi-panas}
-
-Persamaan konduksi panas satu dimensi (Persamaan Fourier):
-\[
-\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}
-\]
-di mana \(T\) adalah suhu, \(t\) adalah waktu, \(x\) adalah posisi, dan \(\alpha\) adalah difusivitas termal.
-
-Misalkan suhu di tambang berubah dengan waktu sesuai persamaan konduksi panas, dengan \(\alpha = 1 \text{ m}^2/\text{s}\), suhu awal \(T(x, 0) = 100 \text{°C}\) di seluruh tambang. Menggunakan metode numerik, kita bisa memodelkan distribusi suhu di tambang setelah beberapa waktu.
-
 \chapter{Bilangan Real}\label{Bilangan_Real}
+
+Bilangan real adalah himpunan semua bilangan rasional dan irasional. Himpunan ini meliputi bilangan bulat, bilangan pecahan, dan bilangan desimal yang dapat dinyatakan secara tak terbatas. Mari kita bahas definisi, sifat, jenis, rumus, dan contoh materi bilangan real secara lebih mendetail.
+
+\section{Definisi Bilangan Real}\label{definisi-bilangan-real}
+
+Bilangan real adalah himpunan semua bilangan rasional (termasuk bilangan bulat dan pecahan) serta bilangan irasional. Simbol untuk himpunan bilangan real adalah \(\mathbb{R}\).
+
+\section{Sifat-sifat Bilangan Real}\label{sifat-sifat-bilangan-real}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Komutatif dan Asosiatif:} Operasi penjumlahan dan perkalian pada bilangan real bersifat komutatif dan asosiatif.
+\item
+  \textbf{Distributif:} Operasi perkalian distributif terhadap penjumlahan.
+\item
+  \textbf{Aditif Invers:} Setiap bilangan real memiliki aditif invers, yaitu bilangan yang jika ditambahkan akan menghasilkan nol.
+\item
+  \textbf{Multiplikatif Invers:} Kecuali untuk nol, setiap bilangan real memiliki multiplikatif invers.
+\end{enumerate}
+
+\section{Jenis-jenis Bilangan Real}\label{jenis-jenis-bilangan-real}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Bilangan Bulat ( \(\mathbb{Z}\) ):} Bilangan bulat adalah bilangan positif dan negatif yang tidak memiliki pecahan atau bagian desimal.
+\item
+  \textbf{Bilangan Rasional ( \(\mathbb{Q}\) ):} Bilangan rasional adalah bilangan yang dapat dinyatakan sebagai pecahan \(\frac{a}{b}\) di mana \(a\) dan \(b\) adalah bilangan bulat dan \(b \neq 0\).
+\item
+  \textbf{Bilangan Irrasional:} Bilangan irasional tidak dapat dinyatakan dalam bentuk pecahan dan memiliki ekspansi desimal yang tidak berakhir atau berulang.
+\end{enumerate}
+
+\section{Aplikasi dalam Matematika Teknik Pertambangan}\label{aplikasi-dalam-matematika-teknik-pertambangan}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Perhitungan Kadar Mineral:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Estimasi dan analisis kadar mineral di suatu area tambang menggunakan bilangan real untuk menghitung rata-rata dan variabilitasnya.
+  \end{itemize}
+\item
+  \textbf{Pemodelan Geostatistik:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Penggunaan bilangan real dalam pemodelan geostatistik untuk memprediksi distribusi dan kuantitas mineral di dalam tanah.
+  \end{itemize}
+\item
+  \textbf{Analisis Biaya dan Produksi:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Perhitungan biaya operasional per unit produksi menggunakan bilangan real untuk evaluasi ekonomi dari suatu tambang.
+  \end{itemize}
+\item
+  \textbf{Pemodelan Hidrogeologi:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Penggunaan bilangan real untuk menganalisis aliran air bawah tanah dan dampak lingkungan dalam pengelolaan air di tambang.
+  \end{itemize}
+\end{enumerate}
+
+\section{Contoh Kasus}\label{contoh-kasus}
+
+Sebagai contoh konkret, dalam analisis eksplorasi tambang, seorang geolog dapat menggunakan data kedalaman pengeboran (bilangan real) untuk mengevaluasi potensi suatu deposit mineral. Dengan memahami distribusi dan karakteristik bilangan real, mereka dapat membuat perkiraan yang lebih akurat tentang potensi hasil tambang dan kebutuhan operasional.
+
+\section{Kesimpulan}\label{kesimpulan}
+
+Pemahaman yang baik tentang bilangan real penting dalam matematika teknik pertambangan karena mendukung berbagai analisis dan perhitungan yang esensial dalam pengelolaan dan pengembangan tambang. Dengan menggunakan konsep bilangan real ini, para profesional dapat meningkatkan efisiensi operasional dan mengoptimalkan keputusan teknis dalam industri ini.
 
 \chapter{Konsep Fungsi}\label{Konsep_Fungsi}
 
